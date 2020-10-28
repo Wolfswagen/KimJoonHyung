@@ -251,37 +251,165 @@
   </section>
   <hr class="m-0" />
   <!-- Projects-->
+
   <section class="resume-section" id="projects">
     <div class="resume-section-content">
       <h2 class="mb-5">Projects</h2>
-      <div class="mx-auto" style="width: 100%;">
-        <div class="row mx-auto my-5 p-0 align-items-center bg-primary shadow">
-
-          <img class="col-md-5 col-sm-12 w-100 border"
-            src="assets/img/projects/wallendar/thm.png"
-            style="background-image: url(assets/img/projects/wallendar/calendar.png); background-size: cover; background-repeat: no-repeat; border-color: darkgray;" />
-          <div class="col-md-7 col-sm-12 pl-3 mt-2 align-items-center " style="color: white;">
+      <div class="mx-auto container" style="width: 100%;">
+        <div class="row mx-auto my-5 p-0 align-items-center bg-primary shadow" style="width: 90%;">
+          <div class="col-12 col-sm-12 border d-flex p-0" style="object-fit: cover;">
+            <img style="width: 100%;" src="assets/img/projects/wallendar/calendar.png" alt="">
+          </div>
+          <div class="col-12 col-sm-12 pl-3 mt-2 align-items-center " style="color: white;">
             <h3 class="text-white" style="font-size: 2.5em;">Wallendar</h3>
 
             <p style="font-size: 1.0em;">개발기간 : 2020. 8.~ 2020. 9.</p>
             <p style="font-size: 1.2em;">달력형 소셜 네트워크 서비스</p>
             <p style="font-size: 1.0em;">기여도 : Front 100% / Back 100%</p>
-            <p class="my-0" style="font-size: 0.9em; word-break: keep-all;">#JAVA #SpringBoot #RestAPI #MariaDB #JPA #BootStrap #AWS(EC2,RDS,S3) #SHA256 #GoogleSMTP</p>
-
+            <p class="my-0" style="font-size: 0.9em; word-break: keep-all;">#JAVA #SpringBoot #RestAPI #MariaDB #JPA
+              #BootStrap #AWS(EC2,RDS,S3) #SHA256 #GoogleSMTP</p>
             <div class="text-secondary my-3">
+              <p style="font-size: 1.1em; font-weight: bolder; "></p>
+              <a class="text-white btn btn-outline-light btn-sm" data-toggle="modal" data-target="#wallendarModal">
+                자세히 보기
+              </a>
+              </p>
               <a class="text-white" href="http://wallendal.net" target="_blank"><i class="fas fa-calendar-check"></i>
                 링크</a>
               <a class="text-white" href="https://github.com/Wolfswagen/wallendar" target="_blank"><i
                   class="fab fa-github"></i> github</a>
+
             </div>
+            <!-- Modal -->
+            <div class="modal fade" id="wallendarModal">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h2 class="modal-title" id="wallendarModalLabel">Wallendar</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
 
+                  <div class="modal-body" style="color: black;">
+                    <div class="mx-auto container">
+                      <div class="row mx-auto my-4 p-0 align-items-center">
+                        <h3 style="font-size: 1.5em;">1. 로그인</h3>
+                        <div class="col-12 col-sm-12 d-flex justify-content-center">
+                          <img style="width: 80%;" src="assets/img/projects/wallendar/login.JPG" alt="">
+                        </div>
+                        <div class="col-12 mt-2">
+                          <p class="my-0" style="font-size: 1.0em; word-break: keep-all;">계정 정보를 입력받고 JSON 형태로
+                            Controller에
+                            전송합니다.
+                            로그인 성공 시 프로필, 유저이름 등의 로그인 정보는 Session Storage에 저장됩니다.</p>
+                        </div>
+                      </div>
 
+                      <div class="row mx-auto my-4 p-0 align-items-center">
+                        <h3 style="font-size: 1.5em;">2. 회원가입</h3>
+                        <div class="col-12 col-sm-12 d-flex justify-content-center">
+                          <img style="width: 80%;" src="assets/img/projects/wallendar/register.png" alt="">
+                        </div>
+                        <div class="col-12 mt-2">
+                          <p class="my-0" style="font-size: 1.0em; word-break: keep-all;">
+                            이메일, 비밀번호 등의 입력 정보는 JSON 형태로 전송되고, 프로필 사진 파일은 FormData로
+                            전송되어 Controller에서 AWS S3로 업로드 됩니다. 비밀번호는 SHA256암호화 후 DB에 저장됩니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row mx-auto my-4 p-0 align-items-center">
+                        <h3 style="font-size: 1.5em;">3. 이메일 인증</h3>
+                        <div class="col-12 col-sm-12 d-flex justify-content-center">
+                          <img style="width: 80%;" src="assets/img/projects/wallendar/auth.png" alt="">
+                        </div>
+                        <div class="col-12 mt-2">
+                          <p class="my-0" style="font-size: 1.0em; word-break: keep-all;">
+                            이메일 인증을 통해 비밀번호를 재설정 할 수 있습니다. 인증 코드는 Google SMTP를 통해 사용자 메일로 전송됩니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row mx-auto my-4 p-0 align-items-center">
+                        <h3 style="font-size: 1.5em;">4. Calendar</h3>
+                        <div class="col-12 col-sm-12 d-flex justify-content-center">
+                          <img style="width: 80%;" src="assets/img/projects/wallendar/calendar.png" alt="">
+                        </div>
+                        <div class="col-12 mt-2">
+                          <p class="my-0" style="font-size: 1.0em; word-break: keep-all;">
+                            달력 형태로 제공되는 개인 페이지입니다. 개인 Calendar에서 글 게시, 수정, 삭제가 가능하고 다른 사람의 Calendar를 방문하여 게시글을 확인할 수
+                            있습니다. <br> 사용자를 팔로우하거나 팔로우 정보를 확인할 수 있습니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row mx-auto my-4 p-0 align-items-center">
+                        <h3 style="font-size: 1.5em;">5. 게시물</h3>
+                        <div class="col-12 col-sm-12 d-flex justify-content-center">
+                          <img style="width: 80%;" src="assets/img/projects/wallendar/post.png" alt="">
+                        </div>
+                        <div class="col-12 mt-2">
+                          <p class="my-0" style="font-size: 1.0em; word-break: keep-all;">
+                            Wallendar의 게시물은 하루에 하나로 제한되어있습니다. 사진 한 장이 반드시 게시되어야하며 태그를 추가할 수 있습니다.
+                            태그를 클릭하면 해당 태그로 게시물을 검색할 수 있습니다.
+                            게시된 사진은 Controller를 통해 AWS S3에 저장되고 DB에는 S3의 경로가 저장됩니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row mx-auto my-4 p-0 align-items-center">
+                        <h3 style="font-size: 1.5em;">6. 검색</h3>
+                        <div class="col-12 col-sm-12 d-flex justify-content-center">
+                          <img style="width: 80%;" src="assets/img/projects/wallendar/search.png" alt="">
+                        </div>
+                        <div class="col-12 mt-2">
+                          <p class="my-0" style="font-size: 1.0em; word-break: keep-all;">
+                            상단의 검색창을 통해 태그와 사용자를 검색할 수 있습니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row mx-auto my-4 p-0 align-items-center">
+                        <h3 style="font-size: 1.5em;">7. Wall</h3>
+                        <div class="col-12 col-sm-12 d-flex justify-content-center border-0">
+                          <img style="width: 80%;" src="assets/img/projects/wallendar/wall.png" alt="">
+                        </div>
+                        <div class="col-12 mt-2">
+                          <p class="my-0" style="font-size: 1.0em; word-break: keep-all;">
+                            달력 인터페이스를 통해 날짜별로 게시물을 검색할 수 있습니다.
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row mx-auto my-5 p-0 align-items-center">
+                        <h3 style="font-size: 1.5em;">후기</h3>
+                        <div class="col-12 mt-2">
+                          <p class="my-0" style="font-size: 1.0em; word-break: keep-all;">
+                            개발 후 배포과정에서 AWS 환경을 사용하면서 변경 사항이 많았습니다. 특히 DBMS를 Oracle에서 MariaDB로 변경해야했는데, ORM을 적용하였기 때문에 변경 사항을 최소화할 수 있었습니다.
+                            <br>
+                            또 처음에는 이미지를 LOB 데이터로 DB에 저장하였는데 이미지 로드에 시간이 오래 걸리는 이슈가 있었고, 이를 해결하기 위해 AWS S3 버킷을 채택했습니다. 
+                            <br>
+                            브라우저에서 Controller로 전달된 파일을 Java AWS API를 통해 S3버킷으로 업로드했고, DB에는 S3버킷의 접근 주소를 저장하여 로딩 속도를 획기적으로 개선할 수 있었습니다.
+                          </p>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
-    </div>
   </section>
+
+
   <hr class="m-0" />
   <!-- Awards-->
   <section class="resume-section" id="awards">
@@ -304,6 +432,7 @@
     </div>
   </section>
   </div>
+
   <!-- Bootstrap core JS-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
@@ -313,4 +442,4 @@
   <script src="js/scripts.js"></script>
 </body>
 
-</html>
+</html>ㄴ
