@@ -40,12 +40,4 @@
         target: "#sideNav",
     });
 
-    $('.col-6').hover(function() {
-        $(this).find(".text-primary").css("opacity", 0.4);
-        $(this).find(".card-img-overlay img").attr("hidden", false)
-      }, function() {
-        $(this).find("img").css("opacity", 1.0);
-        $(this).find(".card-img-overlay img").attr("hidden", true)
-      });
-
 })(jQuery); // End of use strict
